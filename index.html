@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPIPQ - AI File Auto Organizer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .hero {
+            text-align: center;
+            color: white;
+            padding: 60px 0;
+        }
+        
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .hero p {
+            font-size: 1.3em;
+            opacity: 0.9;
+            margin-bottom: 40px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #fff;
+            color: #667eea;
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        
+        .features {
+            background: white;
+            border-radius: 20px;
+            padding: 60px 40px;
+            margin-top: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        
+        .features h2 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 40px;
+            color: #333;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature {
+            text-align: center;
+            padding: 30px;
+            border-radius: 15px;
+            background: #f8f9fa;
+            transition: transform 0.2s;
+        }
+        
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        
+        .feature h3 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            color: #667eea;
+        }
+        
+        .demo {
+            background: #f8f9fa;
+            border-radius: 20px;
+            padding: 60px 40px;
+            margin-top: 40px;
+        }
+        
+        .demo h2 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 40px;
+        }
+        
+        .code-block {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 20px;
+            border-radius: 10px;
+            overflow-x: auto;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+        
+        .pricing {
+            background: white;
+            border-radius: 20px;
+            padding: 60px 40px;
+            margin-top: 40px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        
+        .pricing h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        
+        .price {
+            font-size: 4em;
+            color: #667eea;
+            font-weight: 700;
+            margin: 30px 0;
+        }
+        
+        .price span {
+            font-size: 0.4em;
+            color: #666;
+        }
+        
+        .buy-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px 60px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.2em;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .buy-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+        
+        .guarantee {
+            margin-top: 20px;
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: white;
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+            
+            .hero p {
+                font-size: 1.1em;
+            }
+            
+            .features, .demo, .pricing {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="hero">
+            <h1>🗂️ IPIPQ</h1>
+            <p>AI 自动整理文件，让下载文件夹永远干净</p>
+            <a href="#pricing" class="cta-button">立即下载</a>
+        </section>
+        
+        <section class="features">
+            <h2>✨ 核心功能</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <div class="feature-icon">🤖</div>
+                    <h3>自动识别类型</h3>
+                    <p>智能识别图片、文档、视频、代码等 50+ 种文件格式</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📁</div>
+                    <h3>自动分类归档</h3>
+                    <p>按文件类型和修改日期自动整理到对应文件夹</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">✨</div>
+                    <h3>自动命名优化</h3>
+                    <p>清理乱码字符，智能处理重名文件</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="demo">
+            <h2>🚀 使用方法</h2>
+            <div class="code-block">
+# 1. 下载并解压
+# 2. 在终端中运行
+$ python organize.py
+
+# 整理完成！
+# 你的 Downloads 文件夹现在井井有条
+            </div>
+        </section>
+        
+        <section class="pricing" id="pricing">
+            <h2>💰 定价</h2>
+            <p>一次购买，终身使用</p>
+            <div class="price">
+                ¥19 <span>/ 永久</span>
+            </div>
+            <a href="https://gumroad.com/l/ipipq" class="buy-button">立即购买</a>
+            <p class="guarantee">⚡ 7天无理由退款保证</p>
+        </section>
+        
+        <footer>
+            <p>© 2026 IPIPQ. Made with ❤️ for productivity.</p>
+        </footer>
+    </div>
+</body>
+</html>
