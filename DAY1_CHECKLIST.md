@@ -26,7 +26,7 @@
 ## 📦 交付物
 
 ```
-/Users/bill/AIUCE/
+$HOME/AIUCE/
 ├── organize.py              # 主程序
 ├── README_IPIPQ.md          # 使用说明
 ├── index.html               # 销售页面
@@ -53,7 +53,7 @@
 ## 📊 测试数据
 
 ```
-测试文件夹: /Users/bill/Downloads
+测试文件夹: $HOME/Downloads
 文件数量: 18个
 
 分类结果:
